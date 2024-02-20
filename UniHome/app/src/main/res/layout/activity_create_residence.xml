@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".CreateResidenceActivity">
+
+    <ImageView
+        android:id="@+id/createresidence_exit_arrow_iv"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/exit_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/createresidence_unihome_logo_iv"
+        android:layout_width="45dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/unihome_logo"
+        android:src="@drawable/uni_home_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line_separator_v"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/keppel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createresidence_unihome_logo_iv" />
+
+    <TextView
+        android:id="@+id/createresidence_create_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Create Residence"
+        android:textColor="@color/lightBrown"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_separator_v" />
+
+    <EditText
+        android:id="@+id/createresidence_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/lightBrown"
+        android:hint="@string/name"
+        android:textColor="@color/lightBrown"
+        android:textColorHint="@color/lightBrown"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_create_title_tv" />
+
+    <EditText
+        android:id="@+id/createresidence_location_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/lightBrown"
+        android:hint="@string/location"
+        android:textColor="@color/lightBrown"
+        android:textColorHint="@color/lightBrown"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_name_et" />
+
+    <EditText
+        android:id="@+id/createresidence_phone_number_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/lightBrown"
+        android:maxLength="9"
+        android:hint="@string/phone_number"
+        android:textColor="@color/lightBrown"
+        android:textColorHint="@color/lightBrown"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_location_et" />
+
+    <TextView
+        android:id="@+id/createresidence_rooms_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:text="Add Rooms"
+        android:textColor="@color/lightBrown"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_phone_number_et" />
+
+    <LinearLayout
+        android:id="@+id/createresidence_rt_1_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_rooms_title_tv">
+
+        <TextView
+            android:id="@+id/createresidence_rt_1_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/lightBrown"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createresidence_rt_1_minus_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_minus_rectangle"
+            android:backgroundTint="@color/lightBrown"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/createresidence_rt_1_number_tv"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/lightBrown"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createresidence_rt_1_plus_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_plus_rectangle"
+            android:backgroundTint="@color/lightBrown"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createresidence_rt_2_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_rt_1_ll">
+
+        <TextView
+            android:id="@+id/createresidence_rt_2_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/lightBrown"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createresidence_rt_2_minus_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_minus_rectangle"
+            android:backgroundTint="@color/lightBrown"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/createresidence_rt_2_number_tv"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/lightBrown"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createresidence_rt_2_plus_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_plus_rectangle"
+            android:backgroundTint="@color/lightBrown"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createresidence_rt_3_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_rt_2_ll">
+
+        <TextView
+            android:id="@+id/createresidence_rt_3_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/lightBrown"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createresidence_rt_3_minus_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_minus_rectangle"
+            android:backgroundTint="@color/lightBrown"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/createresidence_rt_3_number_tv"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/lightBrown"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createresidence_rt_3_plus_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_plus_rectangle"
+            android:backgroundTint="@color/lightBrown"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createresidence_rt_4_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_rt_3_ll">
+
+        <TextView
+            android:id="@+id/createresidence_rt_4_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/lightBrown"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createresidence_rt_4_minus_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_minus_rectangle"
+            android:backgroundTint="@color/lightBrown"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/createresidence_rt_4_number_tv"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/lightBrown"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createresidence_rt_4_plus_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_plus_rectangle"
+            android:backgroundTint="@color/lightBrown"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/createresidence_create_residence_bt"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/lightBrown"
+        android:text="Create"
+        android:textColor="@color/beige"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createresidence_rt_4_ll" />
+</androidx.constraintlayout.widget.ConstraintLayout>
